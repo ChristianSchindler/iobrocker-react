@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {Card, Form} from "react-bootstrap";
+import ListGroup from 'react-bootstrap/ListGroup';
+
+import MyNavbar from "./components/navbar";
+import Status_Layout from "./components/status_layout"
+import Container from "react-bootstrap/Container";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Form>
+                <MyNavbar/>
+                <Container>
+                    <Card className={"mb-5"}>
+                        <ListGroup>
+                            {Status_Layout("red", "abc", <p>fsdyxgcvhjk</p>)}
+                            {Status_Layout("red", "abc", <p>fsdyxgcvhjk</p>)}
+                            {Status_Layout("red", "abc", <p>fsdyxgcvhjk</p>)}
+                            {Status_Layout("green", "abc", <p>fsdyxgcvhjk</p>)}
+                            {Status_Layout("red", "abc", <p>fsdyxgcvhjk</p>)}
+                            {Status_Layout("red", "abc", <p>fsdyxgcvhjk</p>)}
+
+                        </ListGroup>
+                    </Card>
+                </Container>
+            </Form>
+        </div>
+    );
 }
 
 export default App;
